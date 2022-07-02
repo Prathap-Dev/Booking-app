@@ -18,7 +18,7 @@ function Register({inputs}) {
 
     const handleClick = async () => {
         try{
-            await axios.post("http://localhost:8000/api/auth/register",newUser )
+            await axios.post("https://houseinn1.herokuapp.com/api/auth/register",newUser )
             navigate("/login")
         }catch(err){
             console.log(err);

@@ -19,7 +19,7 @@ const Navbar = () => {
     e.preventDefault();
     dispatch({ type: "LOGOUT" });
     try {
-      await axios.post("http://localhost:8000/api/auth/logout");
+      await axios.post("https://houseinn1.herokuapp.com/api/auth/logout");
       navigate("/")
     } catch (err) {
       console.log(err)

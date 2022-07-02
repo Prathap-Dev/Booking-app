@@ -4,7 +4,7 @@ import "./featured.css";
 const Featured = () => {
 
   const { data, loading, error } = useFetch(
-    "http://localhost:8000/api/hotels/countByCity?cities=Coimbatore,Karur,Palladam"
+    "https://houseinn1.herokuapp.com/api/hotels/countByCity?cities=Coimbatore,Karur,Palladam"
   );
   /* const { data, loading, error } = useFetch(
     "/hotels/countByCity?cities=coimbatore,karur,palladam"

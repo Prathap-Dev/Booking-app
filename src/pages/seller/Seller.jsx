@@ -17,7 +17,7 @@ const NewHotel = () => {
   const localStorageData = JSON.parse(localStorage.getItem("user"));
   const LoggedUser = localStorageData._id;
   
-  const { data, loading, error } = useFetch(`http://localhost:8000/api/users/${LoggedUser}`);
+  const { data, loading, error } = useFetch(`https://houseinn1.herokuapp.com/api/users/${LoggedUser}`);
   
   const handleChange = (e) => {
     setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -62,8 +62,8 @@ const NewHotel = () => {
         isAdmin:1,
       }
 
-      await axios.post("http://localhost:8000/api/hotels", newHotel);
-      await axios.put(`http://localhost:8000/api/users/${LoggedUser}`, adminPermission); 
+      await axios.post("https://houseinn1.herokuapp.com/api/hotels", newHotel);
+      await axios.put(`https://houseinn1.herokuapp.com/api/users/${LoggedUser}`, adminPermission); 
       navigate("/")
     } catch (err) {console.log(err)}
   };

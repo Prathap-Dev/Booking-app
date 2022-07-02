@@ -4,7 +4,7 @@ import useFetch from "../../hooks/useFetch";
 const FeaturedProperties = () => {
 
   const { data, loading, error } = useFetch(
-    "http://localhost:8000/api/hotels?featured=true&limit=4"
+    "https://houseinn1.herokuapp.com/api/hotels?featured=true&limit=4"
   );
 
   return (
